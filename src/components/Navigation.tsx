@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Compass, Map, Bookmark } from 'lucide-react';
+import { Compass, Map, Bookmark, LogIn } from 'lucide-react';
 
 export default function Navigation() {
   const location = useLocation();
@@ -46,6 +46,16 @@ export default function Navigation() {
               >
                 <Bookmark className="w-4 h-4" />
                 My Trips
+              </Button>
+            </Link>
+
+            <Link to="/signin">
+              <Button
+                variant={isActive('/signin') ? 'default' : 'outline'}
+                className="gap-2"
+              >
+                <LogIn className="w-4 h-4" />
+                Sign In
               </Button>
             </Link>
           </div>
